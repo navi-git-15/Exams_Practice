@@ -4,7 +4,8 @@ let currentQuestionIndex = 0;
 
 const subjects = {
     Math: mathTopics,
-    PunjabGk: punjabGktopics,
+    PunjabGk: punjabGkTopics,
+    Polity: polityTopics
     
 };
 
