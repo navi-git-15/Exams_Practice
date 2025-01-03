@@ -65,11 +65,11 @@ const basicFactsQuestions = [
     },
     {
         "question": "What is the male population of Punjab?",
-        "answer": "1,46,39,465"
+        "answer": "1,46,39,465 (52.5%)"
     },
     {
         "question": "What is the female population of Punjab?",
-        "answer": "1,31,03,873"
+        "answer": "1,31,03,873 (47.2%)"
     },
     {
         "question": "What is the urban population of Punjab?",
