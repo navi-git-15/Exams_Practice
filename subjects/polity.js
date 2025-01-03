@@ -1,0 +1,4 @@
+const polityTopics = {
+    "Background": backgroundQuestions,
+    
+  };
