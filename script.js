@@ -4,7 +4,7 @@ let currentQuestionIndex = 0;
 
 const subjects = {
     Math: mathTopics,
-    Science: scienceTopics,
+    
 };
 
 function selectSubject(subject) {
