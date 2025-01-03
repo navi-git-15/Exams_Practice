@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Word Answer Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">One Word Answer Quiz</h1>
+        <div id="main-content" class="text-center">
+            <div id="subject-selection">
+                <h2>Select Subject</h2>
+                <button class="btn btn-primary mx-2" onclick="selectSubject('Math')">Math</button>
+                <button class="btn btn-primary mx-2" onclick="selectSubject('Science')">Science</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load topic data files first -->
+    <script src="Math/percentage_fraction.js"></script>
+    <script src="Science/topic1.js"></script>
+    <script src="Science/topic2.js"></script>
+
+    <!-- Load subject files after topic data -->
+    <script src="Subjects/math.js"></script>
+    <script src="Subjects/science.js"></script>
+
+    <!-- Load the main script last -->
+    <script src="script.js"></script>
+</body>
+
+</html>

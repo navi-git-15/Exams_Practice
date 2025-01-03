@@ -1,0 +1,143 @@
+/* Body and Background */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: #10502a !important; /* Soft Grey background */
+    color: #ffffff !; /* Charcoal Grey text color */
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Default font size for larger screens */
+}
+
+/* Headings */
+h1{
+    color: #ffffff !important; /* Light Yellow for headings */
+}
+h2 {
+    color: #353434 !important; /* Light Yellow for headings */
+}
+
+/* Buttons */
+button {
+    background-color: #FF6F61; /* Coral Pink for buttons */
+    color: #ffffff; /* White text on buttons */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #33973b; /* Tangerine for hover effect */
+    transform: scale(1.1);
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Content */
+.text-center {
+    text-align: center;
+}
+
+/* Question and Answer Section */
+#main-content {
+    background-color: #aee5c1; /* Soft Orange for question section */
+    border: 1px solid #046329; /* Light Soft Orange border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Answer Section */
+#answer-section {
+    background-color: #e8fffa;
+    border: 1px solid #2f774b; 
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    color: #333333; /* Charcoal Grey text */
+}
+
+/* Restart Button */
+button.btn-primary {
+    background-color: #278b57; /* Peach for restart button */
+}
+
+button.btn-primary:hover {
+    background-color: #33963c; /* Darker Peach */
+}
+
+/* Adjust Margins */
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+/* Spacing */
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mx-2 {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Button Groups */
+button + button {
+    margin-left: 10px;
+}
+
+/* Responsive Font Sizes for Smaller Screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce base font size */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller heading for tablets */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, button {
+        font-size: 0.9rem; /* Adjust text size for content and buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Further reduce base font size for mobile screens */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p, button {
+        font-size: 0.8rem; /* Adjust text size for content and buttons */
+    }
+
+    #main-content {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
