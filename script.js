@@ -42,7 +42,7 @@ function showQuestion() {
         </div>
         <div class="navigation-buttons mt-3">
             <button class="btn btn-secondary mx-2" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? "disabled" : ""}>Previous Question</button>
-            <button class="btn btn-primary mx-2" onclick="nextQuestion()">Next Question</button>
+            <button class="btn btn-primary mx-2 mt-2" onclick="nextQuestion()">Next Question</button>
         </div>
     `;
 }
@@ -71,7 +71,7 @@ function nextQuestion() {
     } else {
         document.getElementById("main-content").innerHTML = `
             <h2>Quiz Completed!</h2>
-            <button class="btn btn-primary mt-3" onclick="reload()">Restart</button>
+            <button class="btn btn-primary mt-3s" onclick="reload()">Restart</button>
         `;
     }
 }
