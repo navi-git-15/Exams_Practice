@@ -32,10 +32,11 @@ function selectTopic(topic) {
 
 function showQuestion() {
     const questionData = subjects[selectedSubject][selectedTopic][currentQuestionIndex];
+    const totalQuestions = subjects[selectedSubject][selectedTopic].length;
     const mainContent = document.getElementById("main-content");
     mainContent.innerHTML = `
         <div class="question-box">
-            <h2 class="question-number">Question ${currentQuestionIndex + 1}</h2>
+            <h2 class="question-number">Question ${currentQuestionIndex + 1} / ${totalQuestions}</h2>
             <p class="question">${questionData.question}</p>
             <button class="btn btn-success mt-3" onclick="showAnswer()">Show Answer</button>
             <div id="answer-section" class="mt-3"></div>
@@ -46,6 +47,7 @@ function showQuestion() {
         </div>
     `;
 }
+
 
 function showAnswer() {
     const questionData = subjects[selectedSubject][selectedTopic][currentQuestionIndex];
