@@ -6,7 +6,7 @@ const subjects = {
     Math: mathTopics,
     PunjabGk: punjabGkTopics,
     Polity: polityTopics,
-    
+
 };
 
 function selectSubject(subject) {
@@ -31,29 +31,36 @@ function selectTopic(topic) {
 }
 
 function showQuestion() {
-    const questionData =
-        subjects[selectedSubject][selectedTopic][currentQuestionIndex];
+    const questionData = subjects[selectedSubject][selectedTopic][currentQuestionIndex];
     const mainContent = document.getElementById("main-content");
     mainContent.innerHTML = `
-        <div class= "question-box">
-            <h2 class='question-number'>Question ${currentQuestionIndex + 1}</h2>
-            <p class= 'question'>${questionData.question}</p>
+        <div class="question-box">
+            <h2 class="question-number">Question ${currentQuestionIndex + 1}</h2>
+            <p class="question">${questionData.question}</p>
             <button class="btn btn-success mt-3" onclick="showAnswer()">Show Answer</button>
             <div id="answer-section" class="mt-3"></div>
         </div>
-    
-  `;
+        <div class="navigation-buttons mt-3">
+            <button class="btn btn-secondary mx-2" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? "disabled" : ""}>Previous Question</button>
+            <button class="btn btn-primary mx-2" onclick="nextQuestion()">Next Question</button>
+        </div>
+    `;
 }
 
 function showAnswer() {
-    const questionData =
-        subjects[selectedSubject][selectedTopic][currentQuestionIndex];
+    const questionData = subjects[selectedSubject][selectedTopic][currentQuestionIndex];
     const answerSection = document.getElementById("answer-section");
     answerSection.innerHTML = `
-    <p><strong>Answer:</strong> ${questionData.answer}</p>
-    <p>${questionData.extra || ''}</p>
-    <button class="btn btn-primary mt-3" onclick="nextQuestion()">Next Question</button>
-  `;
+        <p><strong>Answer:</strong> ${questionData.answer}</p>
+        <p>${questionData.extra || ''}</p>
+    `;
+}
+
+function previousQuestion() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion();
+    }
 }
 
 function nextQuestion() {
@@ -63,9 +70,9 @@ function nextQuestion() {
         showQuestion();
     } else {
         document.getElementById("main-content").innerHTML = `
-      <h2>Quiz Completed!</h2>
-      <button class="btn btn-primary mt-3" onclick="reload()">Restart</button>
-    `;
+            <h2>Quiz Completed!</h2>
+            <button class="btn btn-primary mt-3" onclick="reload()">Restart</button>
+        `;
     }
 }
 
