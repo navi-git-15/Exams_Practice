@@ -29,7 +29,7 @@ function selectSubject(subject) {
         ${topics
             .map(
                 (topic) =>
-                    `<button class="btn btn-primary mx-2" onclick="selectTopic('${topic}')">${topic}</button>`
+                    `<button class="btn btn-primary mx-2 mt-2" onclick="selectTopic('${topic}')">${topic}</button>`
             )
             .join("")}
         <button class="btn btn-warning mx-2 mt-2" onclick="viewStarred()">Starred</button>
@@ -95,7 +95,7 @@ function showStarredQuestions() {
             <p class="question">${questionData.question}</p>
             <button class="btn btn-success mt-3" onclick="showAnswer()">Show Answer</button>
             <button class="btn mt-3" onclick="unstarQuestion()">
-                <span class="text-warning" style="font-size: 24px;">★</span>
+                <span class="text-warning" style="font-size: 24px,;">★</span>
             </button>
             <div id="answer-section" class="mt-3"></div>
         </div>
