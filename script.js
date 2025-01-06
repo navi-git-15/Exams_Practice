@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Populate subjects dropdown
-    Object.keys(subjects).forEach(subject => {
+    Object.keys(subjects).forEach((subject) => {
       const option = document.createElement("option");
       option.value = subject;
       option.textContent = subject.charAt(0).toUpperCase() + subject.slice(1);
@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Remove dynamically loaded scripts
     function removeExistingScripts() {
-      document.querySelectorAll('script[data-dynamic]').forEach(script => script.remove());
+      document
+        .querySelectorAll("script[data-dynamic]")
+        .forEach((script) => script.remove());
     }
 
     // Load subject file and populate topics
@@ -49,14 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           loadTopics(subjectSelect.value);
         };
-        script.onerror = () => console.error(`Failed to load script for ${subjectSelect.value}`);
+        script.onerror = () =>
+          console.error(`Failed to load script for ${subjectSelect.value}`);
         document.body.appendChild(script);
       }
     });
 
     // Load topics for the selected subject
     function loadTopics(subject) {
-      topics[subject].forEach(topic => {
+      topics[subject].forEach((topic) => {
         const option = document.createElement("option");
         option.value = topic;
         option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1);
@@ -78,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.setItem("quizTopic", topic);
       window.location.href = "quiz.html";
     });
-
   } else if (pageTitle === "Quiz Page") {
     // Code for quiz.html
     const quizTitle = document.getElementById("quizTitle");
@@ -88,7 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.getElementById("nextButton");
     const submitButton = document.getElementById("submitButton");
 
-    if (!quizTitle || !questionText || !optionsList || !prevButton || !nextButton || !submitButton) {
+    if (
+      !quizTitle ||
+      !questionText ||
+      !optionsList ||
+      !prevButton ||
+      !nextButton ||
+      !submitButton
+    ) {
       console.error("Required elements are missing on quiz.html.");
       return;
     }
@@ -119,10 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function startQuiz(quizData, subject, topic) {
       let currentQuestionIndex = 0;
 
-      quizTitle.textContent = `${subject.charAt(0).toUpperCase() + subject.slice(1)} - ${topic.charAt(0).toUpperCase() + topic.slice(1)}`;
-      
+      quizTitle.textContent = `${
+        subject.charAt(0).toUpperCase() + subject.slice(1)
+      } - ${topic.charAt(0).toUpperCase() + topic.slice(1)}`;
+
       const totalQuestions = quizData.length; // Get the total number of questions
-      
+
       const loadQuestion = (index) => {
         const { question, options, answer } = quizData[index];
         questionText.textContent = question;
@@ -130,19 +141,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Display current question number (e.g., Question 1/50)
         const questionNumberElement = document.getElementById("questionNumber");
-        questionNumberElement.textContent = `Question ${index + 1}/${totalQuestions}`;
+        questionNumberElement.textContent = `Question ${
+          index + 1
+        }/${totalQuestions}`;
 
         let selectedAnswer = null;
 
         // Shuffle options
         const shuffledOptions = shuffleArray(options);
 
-        shuffledOptions.forEach(option => {
+        shuffledOptions.forEach((option) => {
           const listItem = document.createElement("li");
           listItem.className = "list-group-item";
           listItem.textContent = option;
           listItem.addEventListener("click", () => {
-            optionsList.querySelectorAll(".list-group-item").forEach(item => item.classList.remove("active"));
+            optionsList
+              .querySelectorAll(".list-group-item")
+              .forEach((item) => item.classList.remove("active"));
             listItem.classList.add("active");
             selectedAnswer = option;
           });
@@ -150,7 +165,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         prevButton.disabled = index === 0;
-        nextButton.textContent = index === quizData.length - 1 ? "Submit" : "Next";
+        nextButton.textContent =
+          index === quizData.length - 1 ? "Submit" : "Next";
         submitButton.disabled = false; // Enable the submit button for the question
 
         submitButton.onclick = () => {
@@ -189,12 +205,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       loadQuestion(currentQuestionIndex);
-      
+
       // Function to show feedback
       function showFeedback(selected, isCorrect, correctAnswer) {
         const allOptions = optionsList.querySelectorAll(".list-group-item");
 
-        allOptions.forEach(option => {
+        allOptions.forEach((option) => {
           if (option.textContent === selected) {
             option.innerHTML += isCorrect ? " ✔️" : " ❌"; // Add tick or cross
           }
@@ -205,7 +221,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Play sound based on correctness
-        const audio = new Audio('assets/sounds/' + (isCorrect ? 'correct.mp3' : 'incorrect.mp3'));
+        const audio = new Audio(
+          "assets/sounds/" + (isCorrect ? "correct.mp3" : "incorrect.mp3")
+        );
         audio.play();
       }
 
