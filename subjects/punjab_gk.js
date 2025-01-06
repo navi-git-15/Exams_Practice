@@ -1,6 +1,8 @@
-const punjabGkTopics = {
-    "Basic Facts": basicFactsQuestions,
-    "Ancient History": ancientHistoryQuestions,
-    "Medieval History": medievalHistoryQuestions,
-    "Sikh Gurus": sikhGurusQuestions,
-  };
+const topics = {
+  punjab_gk: [
+    "basic_facts",
+    "ancient_history",
+    "medieval_history",
+    "sikh_gurus",
+  ],
+};

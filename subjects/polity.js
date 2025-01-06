@@ -1,5 +1,3 @@
-const polityTopics = {
-    "Background": backgroundQuestions,
-    "Making of The Constitution": makingConstitutionQuestions,
-    
+const topics = {
+    polity: ["background", "making_of_constitution"]
   };

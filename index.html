@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exams Practice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container mt-5">
-        <a href="https://navi-git-15.github.io/Exams_Practice/">
-            <button class="btn btn-primary mx-2">Home</button>
-        </a>
-
-        <h1 class="text-center mb-4 mt-3">Exam Practice</h1>
-        <div id="main-content" class="text-center">
-            <div id="subject-selection">
-                <h2>Select Subject</h2>
-                <button class="btn btn-primary mx-2 mt-2" onclick="selectSubject('Math')">Math</button>
-                <button class="btn btn-primary mx-2 mt-2" onclick="selectSubject('PunjabGk')">Punjab GK</button>
-                <button class="btn btn-primary mx-2 mt-2" onclick="selectSubject('Polity')">Polity</button>
-            </div>
+      <h1 class="text-center text-light">Exams Quiz</h1>
+      <div class="card p-4 mt-4">
+        <div class="mb-3">
+          <label for="subject" class="form-label text-light"
+            >Choose Subject</label
+          >
+          <select id="subject" class="form-select">
+            <option value="">Select Subject</option>
+          </select>
         </div>
+        <div class="mb-3">
+          <label for="topic" class="form-label text-light">Choose Topic</label>
+          <select id="topic" class="form-select" disabled>
+            <option value="">Select Topic</option>
+          </select>
+        </div>
+        <button id="startQuiz" class="btn btn-success w-100" disabled>
+          Start Quiz
+        </button>
+      </div>
     </div>
 
-    <!-- math topics -->
-    <script src="math/percentage_fraction.js"></script>
-
-    <!-- Punjab GK topics -->
-    <script src="punjab_gk/basic_facts.js"></script>
-    <script src="punjab_gk/ancient_history.js"></script>
-    <script src="punjab_gk/medieval_history.js"></script>
-    <script src="punjab_gk/sikh_gurus.js"></script>
-
-    <!-- Polity topics -->
-    <script src="polity/background.js"></script>
-    <script src="polity/making_of_constitution.js"></script>
-
-
-    <!-- Load subject files after topic data -->
-    <script src="subjects/math.js"></script>
-    <script src="subjects/punjab_gk.js"></script>
-    <script src="subjects/polity.js"></script>
-
-
-
-    <!-- Load the main script last -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

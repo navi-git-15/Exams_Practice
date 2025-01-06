@@ -1,3 +1,138 @@
+index.html -
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center text-light">Exams Quiz</h1>
+    <div class="card p-4 mt-4">
+      <div class="mb-3">
+        <label for="subject" class="form-label text-light">Choose Subject</label>
+        <select id="subject" class="form-select">
+          <option value="">Select Subject</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="topic" class="form-label text-light">Choose Topic</label>
+        <select id="topic" class="form-select" disabled>
+          <option value="">Select Topic</option>
+        </select>
+      </div>
+      <button id="startQuiz" class="btn btn-success w-100" disabled>Start Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+quiz.html -
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 id="quizTitle" class="text-light">Quiz</h1>
+      <button id="homeButton" class="btn btn-darkgreen text-light" onclick="window.location.href='index.html';">Home</button>
+    </div>
+    <div id="quizContainer" class="card p-4 mt-4">
+      <div id="questionSection">
+        <p id="questionNumber" class="text-light fs-2"></p> <!-- Display question number here -->
+        <h4 id="questionText" class="text-light"></h4>
+        <ul id="optionsList" class="list-group mt-3"></ul>
+      </div>
+      <div id="navigationButtons" class="mt-4 d-flex justify-content-between">
+        <button id="prevButton" class="btn btn-secondary" disabled>Previous</button>
+        <button id="submitButton" class="btn btn-warning" disabled>Check</button> <!-- Added submit button -->
+        <button id="nextButton" class="btn btn-success">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const subject = sessionStorage.getItem("quizSubject");
+      const topic = sessionStorage.getItem("quizTopic");
+
+      if (!subject || !topic) {
+        window.location.href = "index.html";
+        return;
+      }
+
+      const quizTitle = document.getElementById("quizTitle");
+      quizTitle.textContent = `${subject.charAt(0).toUpperCase() + subject.slice(1)} - ${topic.charAt(0).toUpperCase() + topic.slice(1)}`;
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+styles.css-
+
+@font-face {
+  font-family: 'Montserrat'; /* Replace with your desired font name */
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype'); 
+}
+
+
+body {
+    background-color: #0e6b2a;
+    font-family: 'Montserrat', sans-serif; 
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .card {
+    max-width: 500px;
+    margin: auto;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1c3524;
+  }
+  
+  .text-light {
+    color: #eedcdc !important;
+  }
+
+  .list-group-item, .list-group-item.active {
+    border-radius: 5px !important;
+    margin-top: 10px !important;
+  }
+
+  .list-group-item.active {
+    background-color: #1a9b3a;
+    border-color: #1a9b3a;
+  }
+
+  .btn-darkgreen {
+    background-color: #0c3d26;
+    border-color: #0c3d26;
+  }
+
+
+
+script.js -
 document.addEventListener("DOMContentLoaded", () => {
   const pageTitle = document.title;
 
@@ -220,3 +355,79 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+
+math.js -
+const topics = {
+  maths: ["fractions", "percentages"]
+};
+
+
+english.js-
+const topics = {
+  english: ["nouns", "pronouns"]
+};
+
+
+fractions.js -
+const quizData = [
+    { question: "What is 1/2 + 1/3?", options: ["2/5", "3/5", "5/6", "4/5"], answer: "5/6" },
+    { question: "Simplify 4/8.", options: ["1/4", "1/2", "3/4", "2/4"], answer: "1/2" },
+  ];
+  
+percentages.js -
+
+const quizData = [
+    {
+      question: "What is 50% of 200?",
+      options: ["50", "100", "200", "150"],
+      answer: "100",
+    },
+    {
+      question: "What is 25% of 400?",
+      options: ["50", "100", "150", "200"],
+      answer: "100",
+    },
+    {
+      question: "If a number increases by 10%, what is 10% of 250?",
+      options: ["10", "15", "20", "25"],
+      answer: "25",
+    },
+    {
+      question: "What percentage of 80 is 20?",
+      options: ["10%", "20%", "25%", "30%"],
+      answer: "25%",
+    },
+  ];
+  
+nouns.js -
+
+const quizData = [
+    { question: "Which is a noun? 'The cat jumps.'", options: ["cat", "jumps", "the", "over"], answer: "cat" },
+    { question: "Identify the proper noun: 'Alice went to the park.'", options: ["Alice", "went", "park", "to"], answer: "Alice" },
+  ];
+  
+pronounds.js -
+const quizData = [
+    {
+      question: "Which is a pronoun?",
+      options: ["he", "run", "house", "quick"],
+      answer: "he",
+    },
+    {
+      question: "Select the pronoun: 'She is kind.'",
+      options: ["She", "kind", "is", "dog"],
+      answer: "She",
+    },
+    {
+      question: "Which word is a pronoun? 'They are playing in the park.'",
+      options: ["They", "playing", "park", "in"],
+      answer: "They",
+    },
+    {
+      question: "Choose the pronoun: 'We will visit them tomorrow.'",
+      options: ["We", "visit", "them", "tomorrow"],
+      answer: "We",
+    },
+  ];
+  
