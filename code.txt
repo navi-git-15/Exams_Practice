@@ -1,3 +1,27 @@
+folder structure -
+- index.html
+- quiz.html 
+- styles.css
+- script.js
+- subjects -
+---- maths.js
+---- polity.js
+- date -
+---- maths -
+------ starred.js 
+------ percentage_fractions.js
+---- polity - 
+------ starred.js
+------ background.js
+
+
+
+
+
+
+
+
+
 index.html -
 
 <!DOCTYPE html>
@@ -162,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Populate subjects dropdown
-    Object.keys(subjects).forEach(subject => {
+    Object.keys(subjects).forEach((subject) => {
       const option = document.createElement("option");
       option.value = subject;
       option.textContent = subject.charAt(0).toUpperCase() + subject.slice(1);
@@ -171,7 +195,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Remove dynamically loaded scripts
     function removeExistingScripts() {
-      document.querySelectorAll('script[data-dynamic]').forEach(script => script.remove());
+      document
+        .querySelectorAll("script[data-dynamic]")
+        .forEach((script) => script.remove());
     }
 
     // Load subject file and populate topics
@@ -192,14 +218,15 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           loadTopics(subjectSelect.value);
         };
-        script.onerror = () => console.error(`Failed to load script for ${subjectSelect.value}`);
+        script.onerror = () =>
+          console.error(`Failed to load script for ${subjectSelect.value}`);
         document.body.appendChild(script);
       }
     });
 
     // Load topics for the selected subject
     function loadTopics(subject) {
-      topics[subject].forEach(topic => {
+      topics[subject].forEach((topic) => {
         const option = document.createElement("option");
         option.value = topic;
         option.textContent = topic.charAt(0).toUpperCase() + topic.slice(1);
@@ -221,7 +248,6 @@ document.addEventListener("DOMContentLoaded", () => {
       sessionStorage.setItem("quizTopic", topic);
       window.location.href = "quiz.html";
     });
-
   } else if (pageTitle === "Quiz Page") {
     // Code for quiz.html
     const quizTitle = document.getElementById("quizTitle");
@@ -231,7 +257,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextButton = document.getElementById("nextButton");
     const submitButton = document.getElementById("submitButton");
 
-    if (!quizTitle || !questionText || !optionsList || !prevButton || !nextButton || !submitButton) {
+    if (
+      !quizTitle ||
+      !questionText ||
+      !optionsList ||
+      !prevButton ||
+      !nextButton ||
+      !submitButton
+    ) {
       console.error("Required elements are missing on quiz.html.");
       return;
     }
@@ -262,10 +295,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function startQuiz(quizData, subject, topic) {
       let currentQuestionIndex = 0;
 
-      quizTitle.textContent = `${subject.charAt(0).toUpperCase() + subject.slice(1)} - ${topic.charAt(0).toUpperCase() + topic.slice(1)}`;
-      
+      quizTitle.textContent = `${
+        subject.charAt(0).toUpperCase() + subject.slice(1)
+      } - ${topic.charAt(0).toUpperCase() + topic.slice(1)}`;
+
       const totalQuestions = quizData.length; // Get the total number of questions
-      
+
       const loadQuestion = (index) => {
         const { question, options, answer } = quizData[index];
         questionText.textContent = question;
@@ -273,19 +308,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Display current question number (e.g., Question 1/50)
         const questionNumberElement = document.getElementById("questionNumber");
-        questionNumberElement.textContent = `Question ${index + 1}/${totalQuestions}`;
+        questionNumberElement.textContent = `Question ${
+          index + 1
+        }/${totalQuestions}`;
 
         let selectedAnswer = null;
 
         // Shuffle options
         const shuffledOptions = shuffleArray(options);
 
-        shuffledOptions.forEach(option => {
+        shuffledOptions.forEach((option) => {
           const listItem = document.createElement("li");
           listItem.className = "list-group-item";
           listItem.textContent = option;
           listItem.addEventListener("click", () => {
-            optionsList.querySelectorAll(".list-group-item").forEach(item => item.classList.remove("active"));
+            optionsList
+              .querySelectorAll(".list-group-item")
+              .forEach((item) => item.classList.remove("active"));
             listItem.classList.add("active");
             selectedAnswer = option;
           });
@@ -293,7 +332,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         prevButton.disabled = index === 0;
-        nextButton.textContent = index === quizData.length - 1 ? "Submit" : "Next";
+        nextButton.textContent =
+          index === quizData.length - 1 ? "Submit" : "Next";
         submitButton.disabled = false; // Enable the submit button for the question
 
         submitButton.onclick = () => {
@@ -332,12 +372,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       loadQuestion(currentQuestionIndex);
-      
+
       // Function to show feedback
       function showFeedback(selected, isCorrect, correctAnswer) {
         const allOptions = optionsList.querySelectorAll(".list-group-item");
 
-        allOptions.forEach(option => {
+        allOptions.forEach((option) => {
           if (option.textContent === selected) {
             option.innerHTML += isCorrect ? " ✔️" : " ❌"; // Add tick or cross
           }
@@ -348,7 +388,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Play sound based on correctness
-        const audio = new Audio('assets/sounds/' + (isCorrect ? 'correct.mp3' : 'incorrect.mp3'));
+        const audio = new Audio(
+          "assets/sounds/" + (isCorrect ? "correct.mp3" : "incorrect.mp3")
+        );
         audio.play();
       }
 
@@ -364,78 +406,63 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+maths.js -
 
-math.js -
 const topics = {
-  maths: ["fractions", "percentages"]
+  maths: ["starred", "percentages_fractions"]
 };
 
-
-english.js-
+polity.js -
 const topics = {
-  english: ["nouns", "pronouns"]
-};
+    polity: ["starred", "background", "making_of_constitution"]
+  };
 
 
-fractions.js -
-const quizData = [
-    { question: "What is 1/2 + 1/3?", options: ["2/5", "3/5", "5/6", "4/5"], answer: "5/6" },
-    { question: "Simplify 4/8.", options: ["1/4", "1/2", "3/4", "2/4"], answer: "1/2" },
-  ];
-  
-percentages.js -
+percentage_fraction.js -
 
 const quizData = [
-    {
-      question: "What is 50% of 200?",
-      options: ["50", "100", "200", "150"],
-      answer: "100",
-    },
-    {
-      question: "What is 25% of 400?",
-      options: ["50", "100", "150", "200"],
-      answer: "100",
-    },
-    {
-      question: "If a number increases by 10%, what is 10% of 250?",
-      options: ["10", "15", "20", "25"],
-      answer: "25",
-    },
-    {
-      question: "What percentage of 80 is 20?",
-      options: ["10%", "20%", "25%", "30%"],
-      answer: "25%",
-    },
-  ];
-  
-nouns.js -
+  {
+    question: "Value of 50%?",
+    options: ["1/2", "1/4", "1/5", "1/3"],
+    answer: "1/2",
+  },
+  {
+    question: "Value of 33.33%?",
+    options: ["1/2", "1/3", "1/4", "1/5"],
+    answer: "1/3",
+  },
+]
+
+background.js -
 
 const quizData = [
-    { question: "Which is a noun? 'The cat jumps.'", options: ["cat", "jumps", "the", "over"], answer: "cat" },
-    { question: "Identify the proper noun: 'Alice went to the park.'", options: ["Alice", "went", "park", "to"], answer: "Alice" },
-  ];
-  
-pronounds.js -
-const quizData = [
-    {
-      question: "Which is a pronoun?",
-      options: ["he", "run", "house", "quick"],
-      answer: "he",
-    },
-    {
-      question: "Select the pronoun: 'She is kind.'",
-      options: ["She", "kind", "is", "dog"],
-      answer: "She",
-    },
-    {
-      question: "Which word is a pronoun? 'They are playing in the park.'",
-      options: ["They", "playing", "park", "in"],
-      answer: "They",
-    },
-    {
-      question: "Choose the pronoun: 'We will visit them tomorrow.'",
-      options: ["We", "visit", "them", "tomorrow"],
-      answer: "We",
-    },
-  ];
-  
+  {
+    question: "When did the Indian Constitution come into effect?",
+    options: [
+      "January 26, 1950",
+      "November 26, 1949",
+      "August 15, 1947",
+      "January 30, 1948",
+    ],
+    answer: "January 26, 1950",
+  },
+  {
+    question:
+      "Who played a pivotal role as the Chairman of the Drafting Committee of the Indian Constitution?",
+    options: [
+      "Dr. B.R. Ambedkar",
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "Sardar Vallabhbhai Patel",
+    ],
+    answer: "Dr. B.R. Ambedkar",
+  },
+]
+
+starred.js -
+
+const quizData = []
+
+
+
+
