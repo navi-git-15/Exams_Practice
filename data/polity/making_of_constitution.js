@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     question: "What is a law in the context of the constitution?",
     options: [

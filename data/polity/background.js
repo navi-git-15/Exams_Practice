@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     question: "When did the Indian Constitution come into effect?",
     options: [

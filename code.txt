@@ -8,10 +8,8 @@ folder structure -
 ---- polity.js
 - date -
 ---- maths -
------- starred.js 
 ------ percentage_fractions.js
 ---- polity - 
------- starred.js
 ------ background.js
 
 
@@ -66,7 +64,6 @@ index.html -
 
 
 
-
 quiz.html -
 
 <!DOCTYPE html>
@@ -81,7 +78,7 @@ quiz.html -
 <body>
   <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center">
-      <h3 id="quizTitle" class="text-light">Quiz</h1>
+      <h4 id="quizTitle" class="text-light">Quiz</h1>
       <button id="homeButton" class="btn btn-darkgreen text-light" onclick="window.location.href='index.html';">Home</button>
     </div>
     <div id="quizContainer" class="card p-4 mt-4">
@@ -115,6 +112,7 @@ quiz.html -
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
@@ -406,21 +404,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 maths.js -
 
 const topics = {
-  maths: ["starred", "percentages_fractions"]
+  maths: ["percentages_fractions"]
 };
 
 polity.js -
 const topics = {
-    polity: ["starred", "background", "making_of_constitution"]
+    polity: ["background", "making_of_constitution"]
   };
 
 
 percentage_fraction.js -
 
-const quizData = [
+window.quizData = [
   {
     question: "Value of 50%?",
     options: ["1/2", "1/4", "1/5", "1/3"],
@@ -435,7 +434,7 @@ const quizData = [
 
 background.js -
 
-const quizData = [
+window.quizData = [
   {
     question: "When did the Indian Constitution come into effect?",
     options: [
@@ -459,9 +458,6 @@ const quizData = [
   },
 ]
 
-starred.js -
-
-const quizData = []
 
 
 

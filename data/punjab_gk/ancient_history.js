@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     question: "What is the Palaeolithic Age also known as?",
     options: [

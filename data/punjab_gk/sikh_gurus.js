@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     question: "What does the word 'Sikh' mean?",
     options: [

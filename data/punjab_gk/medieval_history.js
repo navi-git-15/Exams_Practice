@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     question: "Who first introduced Islam to Punjab?",
     options: [

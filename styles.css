@@ -40,3 +40,9 @@ body {
     background-color: #0c3d26;
     border-color: #0c3d26;
   }
+  .star-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: #ffd700; /* Gold color */
+  }
+  

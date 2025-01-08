@@ -10,8 +10,14 @@
 <body>
   <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center">
-      <h4 id="quizTitle" class="text-light">Quiz</h1>
-      <button id="homeButton" class="btn btn-darkgreen text-light" onclick="window.location.href='index.html';">Home</button>
+      <h4 id="quizTitle" class="text-light">Quiz</h4>
+      <div class="form-check form-switch text-light">
+        <input class="form-check-input" type="checkbox" id="starredSwitch" />
+        <label class="form-check-label text-light" for="starredSwitch">Starred</label>
+      </div>
+      <button id="homeButton" class="btn btn-darkgreen text-light" onclick="window.location.href='index.html';">
+        Home
+      </button>
     </div>
     <div id="quizContainer" class="card p-4 mt-4">
       <div id="questionSection">
@@ -27,20 +33,11 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const subject = sessionStorage.getItem("quizSubject");
-      const topic = sessionStorage.getItem("quizTopic");
+  <!-- JavaScript files -->
+  <script type="module"t src="js/domUtils.js"></script>
+  <script type="module"t src="js/utils.js"></script>
+  <script type="module" src="js/quizUtils.js"></script>
+  <script type="module" src="js/quizPage.js"></script>
 
-      if (!subject || !topic) {
-        window.location.href = "index.html";
-        return;
-      }
-
-      const quizTitle = document.getElementById("quizTitle");
-      quizTitle.textContent = `${subject.charAt(0).toUpperCase() + subject.slice(1)} - ${topic.charAt(0).toUpperCase() + topic.slice(1)}`;
-    });
-  </script>
-  <script src="script.js"></script>
 </body>
 </html>

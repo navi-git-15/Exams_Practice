@@ -1,4 +1,4 @@
-const quizData = [
+window.quizData = [
   {
     question: "When was Punjab created?",
     options: [
