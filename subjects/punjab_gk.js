@@ -4,5 +4,6 @@ const topics = {
     "ancient_history",
     "medieval_history",
     "sikh_gurus",
+    "modern_history",
   ],
 };
