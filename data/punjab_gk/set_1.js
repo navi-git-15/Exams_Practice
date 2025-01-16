@@ -125,7 +125,7 @@ window.quizData = [
     question:
       "Who recites the wedding chants (Chhand) during Punjabi weddings?",
     options: ["Ladla (groom)", "Ladki", "Pandit", "Barat"],
-    answer: "Lada (groom)",
+    answer: "Ladla (groom)",
   },
   {
     question:
