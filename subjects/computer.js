@@ -1,3 +1,3 @@
 const topics = {
-    computer: ["percentages_fractions"]
+    computer: ["set-1"]
   };

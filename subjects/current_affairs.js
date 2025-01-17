@@ -1,3 +1,3 @@
 const topics = {
-    current_affairs: ["percentages_fractions"]
+    current_affairs: ["jan_dec_2024"]
   };
