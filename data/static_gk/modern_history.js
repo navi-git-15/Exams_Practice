@@ -60,7 +60,7 @@ window.quizData = [
   {
     question: "Nana Sahib, a rebel at Kanpur, was the son of Peshwa —",
     options: ["Baji Rao I", "Baji Rao II", "Madhav Rao", "Balaji Vishwanath"],
-    answer: "Bajirao II",
+    answer: "Baji Rao II",
   },
 
   {
@@ -151,4 +151,5 @@ window.quizData = [
     ],
     answer: "Santhal Rebellion",
   },
+
 ];
