@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       punjabi: "subjects/punjabi.js",
       computer: "subjects/computer.js",
       current_affairs: "subjects/current_affairs.js",
+      static_gk: "subjects/static_gk.js",
     };
 
     // Populate subjects dropdown
