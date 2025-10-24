@@ -335,4 +335,264 @@ window.quizData = [
     ],
     answer: "Lord Canning",
   },
+  {
+    question:
+      "During the days of the Revolt of 1857, Maulvi Ahmadullah Shah was known as —",
+    options: ["Danka Shah", "Fakir Shah", "Rebel Saint", "Peer-e-Hind"],
+    answer: "Danka Shah",
+  },
+
+  {
+    question: "In Bihar, the Revolt of 1857 was led by —",
+    options: [
+      "Rani Lakshmibai",
+      "Kunwar Singh",
+      "Begum Hazrat Mahal",
+      "Tantia Tope",
+    ],
+    answer: "Kunwar Singh",
+  },
+
+  {
+    question: "The Governor General of India during the Revolt of 1857 was —",
+    options: [
+      "Lord Dalhousie",
+      "Lord Hastings",
+      "Lord Canning",
+      "Lord Wellesley",
+    ],
+    answer: "Lord Canning",
+  },
+
+  {
+    question: "Rani Laxmibai died in —",
+    options: ["Jhansi", "Gwalior", "Kanpur", "Lucknow"],
+    answer: "Gwalior",
+  },
+
+  {
+    question:
+      "The tribal leaders Sitaram Kanwar and Raghunath Singh Mandloi Bhilala joined the Anti-British Revolution in the year —",
+    options: ["1848 A.D.", "1855 A.D.", "1857 A.D.", "1860 A.D."],
+    answer: "1857 A.D.",
+  },
+
+  {
+    question:
+      "Mangal Pandey was hanged in 1857 for attacking British officers in —",
+    options: ["Meerut", "Barrackpore", "Delhi", "Kanpur"],
+    answer: "Barrackpore",
+  },
+
+  {
+    question:
+      "The Third Anglo-Mysore War (1790–92) was fought between the British and —",
+    options: ["Hyder Ali", "Tipu Sultan", "Mir Qasim", "Nizam of Hyderabad"],
+    answer: "Tipu Sultan",
+  },
+  {
+    question:
+      "The Governor-General of India during the First Anglo-Afghan War was —",
+    options: [
+      "Lord Ellenborough",
+      "Lord Auckland",
+      "Lord Dalhousie",
+      "Lord Hastings",
+    ],
+    answer: "Lord Auckland",
+  },
+
+  {
+    question: "Charles Wood's Dispatch (1854) was related to the —",
+    options: [
+      "Judicial system",
+      "Education sector",
+      "Railway system",
+      "Revenue reforms",
+    ],
+    answer: "Education sector",
+  },
+
+  {
+    question:
+      "The first railway line (1853) in India was introduced by Governor-General —",
+    options: [
+      "Lord Dalhousie",
+      "Lord Canning",
+      "Lord Curzon",
+      "Lord Cornwallis",
+    ],
+    answer: "Lord Dalhousie",
+  },
+
+  {
+    question:
+      "The Governor-General who introduced the Permanent Settlement of Bengal was —",
+    options: [
+      "Lord Wellesley",
+      "Lord Cornwallis",
+      "Lord Hastings",
+      "Lord Dalhousie",
+    ],
+    answer: "Lord Cornwallis (1793)",
+  },
+
+  {
+    question:
+      "The first Governor-General of Bengal who ended the Dual Government system by enforcing the Regulating Act of 1773 was —",
+    options: [
+      "Lord Clive",
+      "Warren Hastings",
+      "Lord Cornwallis",
+      "Lord Wellesley",
+    ],
+    answer: "Warren Hastings",
+  },
+
+  {
+    question: "Doctrine of Lapse in India was introduced by Governor-General —",
+    options: [
+      "Lord Canning",
+      "Lord Dalhousie",
+      "Lord Curzon",
+      "Lord Wellesley",
+    ],
+    answer: "Lord Dalhousie",
+  },
+
+  {
+    question: "The Viceroy of India at the time of India's independence was —",
+    options: [
+      "Lord Mountbatten",
+      "Lord Wavell",
+      "Lord Linlithgow",
+      "Lord Irwin",
+    ],
+    answer: "Lord Mountbatten",
+  },
+
+  {
+    question:
+      "The incorporation of English as the official language for higher education in India was done by —",
+    options: ["Lord Macaulay", "Lord Cornwallis", "Lord Curzon", "Lord Ripon"],
+    answer: "Lord Macaulay",
+  },
+
+  {
+    question: "The Vernacular Press Act was enacted during the regime of —",
+    options: ["Lord Ripon", "Lord Lytton", "Lord Curzon", "Lord Dalhousie"],
+    answer: "Lord Lytton",
+  },
+
+  {
+    question:
+      "The Tripartite Treaty for British interference in Afghanistan was signed by —",
+    options: [
+      "Lord Dalhousie",
+      "Lord Ellenborough",
+      "Lord Auckland",
+      "Lord Canning",
+    ],
+    answer: "Lord Auckland",
+  },
+
+  {
+    question: "The Father of Civil Services in India is —",
+    options: [
+      "Lord Wellesley",
+      "Lord Cornwallis",
+      "Lord Dalhousie",
+      "Warren Hastings",
+    ],
+    answer: "Lord Cornwallis",
+  },
+
+  {
+    question:
+      "The Frazer Commission was appointed to investigate police administration by —",
+    options: ["Lord Curzon", "Lord Ripon", "Lord Lytton", "Lord Dalhousie"],
+    answer: "Lord Curzon",
+  },
+
+  {
+    question:
+      "Accused of committing the judicial murder of Raja Nand Kumar was —",
+    options: [
+      "Lord Cornwallis",
+      "Lord Wellesley",
+      "Warren Hastings",
+      "Lord Dalhousie",
+    ],
+    answer: "Warren Hastings",
+  },
+
+  {
+    question: "The Governor-General during the Anglo-Nepal War was —",
+    options: [
+      "Lord Wellesley",
+      "Lord Hastings",
+      "Lord Dalhousie",
+      "Lord Canning",
+    ],
+    answer: "Lord Hastings",
+  },
+
+  {
+    question: "Lord Dalhousie annexed Punjab into British India in —",
+    options: ["1845", "1846", "1849", "1850"],
+    answer: "1849",
+  },
+
+  {
+    question:
+      "Lord Dalhousie annexed Punjab into British India as the result of —",
+    options: [
+      "First Anglo-Sikh War",
+      "Second Anglo-Sikh War",
+      "Third Anglo-Sikh War",
+      "Treaty of Lahore",
+    ],
+    answer: "Second Anglo Sikh War",
+  },
+
+  {
+    question:
+      "During the trial for the Meerut conspiracy, the Viceroy of India was —",
+    options: ["Lord Irwin", "Lord Lytton", "Lord Curzon", "Lord Linlithgow"],
+    answer: "Lord Irwin",
+  },
+
+  {
+    question: "The Doctrine of Subsidiary Alliance was introduced by —",
+    options: [
+      "Lord Cornwallis",
+      "Lord Wellesley",
+      "Lord Dalhousie",
+      "Lord Curzon",
+    ],
+    answer: "Lord Wellesley",
+  },
+
+  {
+    question: "General Dyer was responsible for —",
+    options: [
+      "Partition of Bengal",
+      "Jallianwala Bagh massacre",
+      "Salt Satyagraha suppression",
+      "Khilafat Movement",
+    ],
+    answer: "Jallianwala Bagh massacre",
+  },
+
+  {
+    question:
+      "The Ryotwari system was devised during British rule in India by —",
+    options: [
+      "Thomas Munro",
+      "Alexander Reed",
+      "Charles Metcalfe",
+      "Warren Hastings",
+    ],
+    answer: "Alexander Reed",
+  },
 ];
