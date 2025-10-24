@@ -151,5 +151,188 @@ window.quizData = [
     ],
     answer: "Santhal Rebellion",
   },
+  {
+    question:
+      "In the Revolt of 1857, Shah Mal rebelled at Baraut in Uttar Pradesh and was killed in battle in —",
+    options: ["May 1857", "June 1857", "July 1857", "August 1857"],
+    answer: "July 1857",
+  },
 
+  {
+    question:
+      "The painting 'In Memoriam', dedicated to British women in India during the Revolt of 1857, was painted by —",
+    options: [
+      "Joseph Noel Patone",
+      "M.F. Pithawala",
+      "Thomas Daniell",
+      "William Carpenter",
+    ],
+    answer: "Joseph Noel Patone",
+  },
+
+  {
+    question: "The Revolt of 1857 was finally suppressed by the British in —",
+    options: ["1858", "1859", "1860", "1861"],
+    answer: "1859",
+  },
+
+  {
+    question:
+      "The Enfield rifles that became the immediate reason for the 1857 revolt were introduced by —",
+    options: [
+      "British Army",
+      "East India Company",
+      "Governor-General Dalhousie",
+      "Governor-General Canning",
+    ],
+    answer: "East India Company",
+  },
+
+  {
+    question: "The region known as the 'Nursery of the Bengal army' was —",
+    options: ["Awadh", "Bihar", "Punjab", "Delhi"],
+    answer: "Awadh",
+  },
+
+  {
+    question:
+      "During the Santhal Rebellion and the Revolt of 1857, the British were helped by —",
+    options: [
+      "Raja Ranjit Singh",
+      "Maharaja Mehtab Chand",
+      "Kunwar Singh",
+      "Rani Avantibai",
+    ],
+    answer: "Maharaja Mehtab Chand",
+  },
+
+  {
+    question: "Rani Lakshmibai of Jhansi was killed in battle in the year —",
+    options: ["1857", "1858", "1859", "1860"],
+    answer: "1858",
+  },
+
+  {
+    question:
+      "The Revolt of 1857 was called 'Neither first, nor national, nor war of Independence' by —",
+    options: ["V.D. Savarkar", "S.N. Sen", "RC Majumdar", "Jawaharlal Nehru"],
+    answer: "RC Majumdar",
+  },
+
+  {
+    question: "The Mughal Emperor deported to Rangoon by the British was —",
+    options: [
+      "Akbar II",
+      "Bahadur Shah Zafar",
+      "Shah Alam II",
+      "Bahadur Shah I",
+    ],
+    answer: "Bahadur Shah Zafar",
+  },
+  {
+    question: "The leader of the 1857 Revolt in Ramgarh state was —",
+    options: [
+      "Rani Lakshmibai",
+      "Avantibai Lodhi",
+      "Begum Hazrat Mahal",
+      "Jhalkari Bai",
+    ],
+    answer: "Avantibai Lodhi",
+  },
+
+  {
+    question: "Mangal Pandey belonged to the British Army regiment named —",
+    options: [
+      "32nd Bengal Native Infantry",
+      "34th Bengal Native Infantry",
+      "36th Bengal Native Infantry",
+      "38th Bengal Native Infantry",
+    ],
+    answer: "34th Bengal Native Infantry",
+  },
+
+  {
+    question:
+      "Bahadur Shah Zafar was imprisoned in Rangoon jail by the British in the year —",
+    options: ["1857", "1858", "1859", "1860"],
+    answer: "1858",
+  },
+
+  {
+    question: "The Indian Revolt of 1857 started on May 10, 1857 from —",
+    options: ["Delhi", "Meerut", "Kanpur", "Lucknow"],
+    answer: "Meerut",
+  },
+
+  {
+    question: "The Indian Revolt of 1857 ended in Gwalior on —",
+    options: ["10 June 1858", "15 June 1858", "20 June 1858", "25 June 1858"],
+    answer: "20 June 1858",
+  },
+
+  {
+    question: "The Policy of ‘Paramountcy’ was initiated by —",
+    options: [
+      "Lord Wellesley",
+      "Lord Hastings",
+      "Lord Dalhousie",
+      "Lord Canning",
+    ],
+    answer: "Lord Hastings",
+  },
+
+  {
+    question:
+      "The Annexation of Awadh by the British East India Company took place in —",
+    options: ["1854", "1855", "1856", "1857"],
+    answer: "1856",
+  },
+
+  {
+    question:
+      "A heavy, large-caliber smoothbore gun for infantry soldiers, introduced in the 16th century, was called —",
+    options: ["Rifle", "Musket", "Cannon", "Pistol"],
+    answer: "Musket",
+  },
+
+  {
+    question:
+      "Rani Lakshmibai died fighting British colonial rulers on 18th June 1858 in —",
+    options: ["Jhansi", "Gwalior", "Kanpur", "Lucknow"],
+    answer: "Gwalior",
+  },
+
+  {
+    question: "The siege to the fortress of Jhansi in 1858 was laid by —",
+    options: [
+      "Colin Campbell",
+      "Sir Hugh Rose",
+      "Lord Canning",
+      "Henry Havelock",
+    ],
+    answer: "Sir Hugh Rose",
+  },
+
+  {
+    question: "The Mughal ruler at the time of the Revolt of 1857 was —",
+    options: ["Akbar II", "Shah Alam II", "Bahadur Shah Zafar", "Farrukhsiyar"],
+    answer: "Bahadur Shah Zafar",
+  },
+
+  {
+    question: "The leader of Faizabad during the 1857 Revolt was —",
+    options: ["Tantia Tope", "Maulvi Ahmadullah", "Nana Sahib", "Kunwar Singh"],
+    answer: "Maulvi Ahmadullah",
+  },
+
+  {
+    question: "The Governor General of India during the 1857 Revolt was —",
+    options: [
+      "Lord Dalhousie",
+      "Lord Hastings",
+      "Lord Canning",
+      "Lord Wellesley",
+    ],
+    answer: "Lord Canning",
+  },
 ];
