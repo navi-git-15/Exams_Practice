@@ -636,7 +636,7 @@ window.quizData = [
     question:
       "How many Presidencies were there in India during the time of Warren Hastings?",
     options: ["2", "3", "4", "5"],
-    answer: "3 (Bengal, Madras, and Bombay)",
+    answer: "3",
   },
 
   {
@@ -711,7 +711,7 @@ window.quizData = [
       "Sardar Vallabhbhai Patel",
       "Jawaharlal Nehru",
     ],
-    answer: "C Rajagopalachari",
+    answer: "C. Rajagopalachari",
   },
   {
     question: "The Viceroy of India at the time of the Kakori conspiracy was?",
